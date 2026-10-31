@@ -8,11 +8,11 @@ class Cart:
         self.items = []
 
     def add_dvd(self, dvd):
-        if len(self.items) > MAX_NUMBERS_ORDERED:
+        if len(self.items) >= MAX_NUMBERS_ORDERED:
             print("The cart is almost full")
             return False
         self.items.append(dvd)
-        print(f"The disc '{dvd.title}' has been added")
+        print(f"Đã thêm đĩa '{dvd.title}' vào giỏ hàng")
         return True
 
     def remove_dvd(self, dvd):
@@ -25,3 +25,19 @@ class Cart:
 
     def total_cost(self):
         return sum(item.cost for item in self.items)
+    
+    def print_cart(self):
+        if not self.items:
+            print("The cart is empty")
+            return
+        print("***********************CART***********************")
+        print("Ordered Items:")
+        for i, item in enumerate(self.items, 1):
+            print(f"{i}. DVD - {item.title} - {item.category} - {item.director} - {item.length}: {item.cost} $")
+        print(f"Total cost: {self.total_cost()} $")
+        print("***************************************************")
+        
+    def apply_discount(self, percent):
+        if percent < 0 or percent > 100:
+            raise ValueError("Invalid percent")
+        return self.total_cost() * (100 - percent) / 100
