@@ -42,6 +42,11 @@ class TestCart(unittest.TestCase):
         self.assertEqual(cart.items[0].title, "A Movie")
         cart.sort_by_cost()
         self.assertEqual(cart.items[0].cost, 25.0)
-
+    def test_search_by_category(self):
+        from aims.search import search_by_category
+        dvd1 = DigitalVideoDisc("The Lion King", "Animation", cost=19.95)
+        dvd2 = DigitalVideoDisc("Star Wars", "Sci-Fi", cost=24.95)
+        res = search_by_category([dvd1, dvd2], "Animation")
+        self.assertEqual(len(res), 1)
 if __name__ == "__main__":
     unittest.main()
