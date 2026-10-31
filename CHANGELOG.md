@@ -10,6 +10,11 @@
 
 ### Fixed
 - Chặn giỏ hàng nhận đĩa thứ 21 vượt quá `MAX_NUMBERS_ORDERED` (#6)
-## [Unreleased]
 ### Added
 - `Cart.sort_by_title()` và `Cart.sort_by_cost()` sắp xếp giỏ hàng
+## [Unreleased]
+
+## [1.1.0] - 2026-11-01
+### Added
+- `Cart.sort_by_title()` và `Cart.sort_by_cost()` sắp xếp giỏ hàng
+- `search_by_category()` tìm kiếm DVD theo thể loại
