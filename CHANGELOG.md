@@ -12,6 +12,9 @@
 - Chặn giỏ hàng nhận đĩa thứ 21 vượt quá `MAX_NUMBERS_ORDERED` (#6)
 ### Added
 - `Cart.sort_by_title()` và `Cart.sort_by_cost()` sắp xếp giỏ hàng
+## [1.0.1] - 2026-11-01
+### Fixed
+- Sửa lỗi `search_by_title` phân biệt chữ hoa/thường (#18)
 ## [Unreleased]
 
 ## [1.1.0] - 2026-11-01
