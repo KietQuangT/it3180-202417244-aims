@@ -10,3 +10,6 @@
 
 ### Fixed
 - Chặn giỏ hàng nhận đĩa thứ 21 vượt quá `MAX_NUMBERS_ORDERED` (#6)
+## [1.0.1] - 2026-11-01
+### Fixed
+- Sửa lỗi `search_by_title` phân biệt chữ hoa/thường (#20)
