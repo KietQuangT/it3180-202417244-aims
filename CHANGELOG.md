@@ -10,3 +10,6 @@
 
 ### Fixed
 - Chặn giỏ hàng nhận đĩa thứ 21 vượt quá `MAX_NUMBERS_ORDERED` (#6)
+## [Unreleased]
+### Added
+- `Cart.sort_by_title()` và `Cart.sort_by_cost()` sắp xếp giỏ hàng
