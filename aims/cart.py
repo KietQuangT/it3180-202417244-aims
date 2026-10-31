@@ -36,3 +36,6 @@ class Cart:
             print(f"{i}. DVD - {item.title} - {item.category} - {item.director} - {item.length}: {item.cost} $")
         print(f"Total cost: {self.total_cost()} $")
         print("***************************************************")
+        
+    def apply_discount(self, percent):
+        return self.total_cost() * percent / 100
